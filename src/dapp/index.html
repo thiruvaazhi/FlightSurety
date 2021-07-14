@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#AM">Airline Registration</a>
+          </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#BI">Register Flight</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#FA">Fund Airline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#PI">Purchase Insurance</a>
+            </li>
+          </ul>
+        
+    </nav>
+
+    <main class="container">
+
+        <div id="display-wrapper" class="top-20">
+        </div>
+        <div class="paper-form">
+          <h2>Submit To Oracles </h2>
+          <form class="top-20">
+            <div class="form-group">
+            <label class="form">Flight</label>
+            </div>
+            <div class="form-group">
+
+            <input type="text" required size="90" id="flight-number"/>
+            </div>
+            <div class="form-group">
+            <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+            </div>
+          </form></div>
+        <div class="top-20"></div>
+        <div id="BI" class="paper-form">
+            <form>
+              <h2>Register Flight</h2>
+    
+              <form>
+                <div class="form-group">
+                    <label class="form">Airline Address</label>
+                    <input type="text" class = "form-control" id="airlineaddress">
+                </div>
+                <div class="form-group">
+                    <label class="form">Flight Code</label>
+                    <input type="text" class="form-control" id="flight">
+                </div>
+                <div class="form-group">
+                    <label class="form">Departure Time</label>
+                    <input type="datetime-local" class = "form-control" id="time">
+                </div>
+                <div class="form-group">
+                    <label class="form">Message Sender</label>
+                    <input type="text" class="form-control" id="passaddress" >
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="registerflight" value="Register Flight">
+                </div>
+            </form>
+          
+<hr/>
+
+<div id="AM" class= "top-20" style="background-color: rgba(243, 155, 12, 0.753)">
+    <div class="top-20" >
+            <h2>Register Airline</h2>
+            <form class="top-20">
+                <div class="form-group">
+                    <label class="form">New Airline Address</label>
+                    <input type="text" class="form-control" id="airline-address">
+                </div>
+                <div class="form-group">
+                    <label class="form">Registering Airline</label>
+                    <input type="text" value=" 0xE2C84597D7478df7ee2e7a49c88F5B5A4d153477"class="form-control" id="registering_Airline" placeholder="Enter address of the message sender, if empty, then contract owner will be used">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="registerairline" value="Register Airline">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="FA" class= "top-20" style="background-color: rgba(77, 72, 64, 0.753)"></div>
+<h2>
+  Fund Airline
+  <form class="top-20">
+       <div class="form-group">
+            <label class="form">New Airline Address</label>
+            <input type="text" class="form-control" id="fundAddress">
+        </div>
+        <div class="form-group">
+            <label class="form">Ether Value</label>
+            <input type="text" class="form-control" id="fundValue" >
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" id="fundairline" value="fund Airline">
+        </div>
+    </form>  
+</div>
+<div class="top-20" style="background-color: rgba(247, 189, 97, 0.931)">
+        <div id="PI" class="paper-form">
+            <form>
+              <h2>Purchase Flight Insurance</h2>
+    
+              <form>
+                <div class="form-group">
+                   <div><label class="form">Airline Address</label><input type="button" class="btn btn-primary" id="popAirline" value="poupulateAirlines"> </div>
+                   <div><select id="populateAirlines" class="form-control" >
+                        <option selected disabled>Select Airlines</option>
+                        <option >0xE2C84597D7478df7ee2e7a49c88F5B5A4d153477</option>
+               </select></div> </div>
+                
+                <div class="form-group">
+                    <label class="form">Flight Code</label>
+                    <select id="flightDetails" class="form-control">
+                        <option>FL123</option>
+                        <option>FL234</option>
+                        <option>FL778</option>
+                        <option>FL215</option>
+                    </select>
+                    
+                </div>
+                <div class="form-group">
+                    <label class="form">Departure Time</label>
+                    <input type="datetime-local" class = "form-control" id="dTime">
+                </div>
+                <div class="form-group">
+                    <label class="form">Insuree Name</label>
+                    <input type="text" class="form-control" id="iAddress" >
+                </div>
+                <div class="form-group">
+                    <label class="form">Insurance Amount</label>
+                    <input type="text" class="form-control" id="iAmount" placeholder="ether value" >
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="buyInsurance" value="Buy Insurance">
+                </div>
+            </form>
+          </div>
+<hr/>
+
+           </main>
+
+
+</body>
+
+</html>
